@@ -22,6 +22,7 @@ header ul {
 }
 
 header ul li+li {
+    /*colocar espaço entre os links */
     margin-left: 24px;
 
 }
@@ -29,5 +30,9 @@ header ul li+li {
 header a {
     color: #ebebeb;
     text-decoration: none;
+    /*tira o traço do link*/
     transition: color 0.2s;
 }
+
+header a :hover {
+    color: #f13239;}

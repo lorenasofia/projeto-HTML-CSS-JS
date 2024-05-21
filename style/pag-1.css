@@ -1,9 +1,8 @@
 * {
     margin: 24;
-    padding: 0;
+    padding:0;
     box-sizing: border-box;
 }
-
 body {
     font-family: sans-serif;
 }
@@ -12,22 +11,35 @@ header {
     background-color: rgb(122, 121, 118);
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content:  flex-end;
 }
-
 header ul {
     list-style: none;
     display: flex;
 
 }
-
 header ul li+li {
     margin-left: 24px;
 
 }
-
 header a {
     color: #ebebeb;
     text-decoration: none;
     transition: color 0.2s;
+}
+
+.dog {
+    height: 400px;
+    padding: 24px;
+    background-image: url("assets\\photos\\home-photo.png");
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.dog h1 {
+    color: #ebebeb;
+    font-size: 36px;
+    
 }

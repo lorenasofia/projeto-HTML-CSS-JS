@@ -31,7 +31,7 @@ header a {
 .dog {
     height: 400px;
     padding: 24px;
-    background-image: url("assets\\photos\\home-photo.png");
+    background-image: url("/assets/photos/home-photo.png");
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -43,3 +43,22 @@ header a {
     font-size: 36px;
     
 }
+
+
+div{
+   max-width: 1500px;
+   margin: 0 auto;
+   padding: 30px;
+   border-radius: 5px;
+   background-color: rgb(122, 121, 118);
+
+}
+
+img{
+    width: 30%;
+    height: auto;
+    display: block;
+}
+
+
+

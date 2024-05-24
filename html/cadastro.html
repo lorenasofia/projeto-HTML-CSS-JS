@@ -1,22 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="/style/style.css">
+    <title>Formulário de Cadastro de Bichinho</title>
+        <link rel="stylesheet" href="\style\cadastro.css">
 </head>
 
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="/html/pag1.html">Home</a></li>
-                <li><a href="/html/pag-2.html">Galeria</a></li>
+                <li><a href="html\pag1.html">Home</a></li>
+                <li><a href="html\pag-2.html">Galeria</a></li>
+                <li><a href="#">Cadastro</a></li>
             </ul>
         </nav>
     </header>
-</body>
 
+    <h2>Cadastro do bichinho</h2>
+    <section class="login">
+        <form action="" method="">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email">
+<!-- dá pra usar JS pra confirmar senha aqui -->
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha">
+            <label for="senhaConf">Confirme sua senha</label>
+            <input type="password" id="senhaConf" name="senhaConf">
+        </form>
+    </section>
+
+    <section class="bichinho">
+        <form action="" method="">
+            <label for="nomeBichinho">Nome do Bichinho:</label>
+            <input type="text" id="nomeBichinho" name="nomeBichinho">
+
+            <label for="fotoBichinho">Foto do Bichinho:</label>
+            <input type="file" id="fotoBichinho" name="fotoBichinho" accept="image/*">
+
+            <label for="descricaoBichinho">Descrição do Bichinho:</label>
+            <textarea id="descricaoBichinho" name="descricaoBichinho" rows="4"></textarea>
+
+            <button type="submit">Enviar</button>
+    </form>
+    </section>
+
+    <div>
+        <!-- TODO divisao aqui COMO FAAAAAAAAAAAAZ-->
+    </div>
+
+    <section>
+        <h2>Feedback?</h2>
+        <p> mate-me </p>
+
+        <select name="tipoFeedback" id="tipoFeedback">
+            <option value="reclamacao">Reclamação</option>
+            <option value="duvida">Dúvida</option>
+            <option value="sugestao">Sugestão</option>
+        </select>
+
+        <textarea name="feedback" id="feedback" rows="10"></textarea>
+        <button>Enviar</button>
+    </section>
+
+<!-- rodapé -->
+    <footer>
+    
+    </footer>
+</body>
 </html>

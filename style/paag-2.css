@@ -22,7 +22,6 @@ header ul {
 }
 
 header ul li+li {
-    /*colocar espaço entre os links */
     margin-left: 24px;
 
 }
@@ -30,9 +29,149 @@ header ul li+li {
 header a {
     color: #ebebeb;
     text-decoration: none;
-    /*tira o traço do link*/
     transition: color 0.2s;
 }
 
 header a :hover {
-    color: #f13239;}
+    color: #f13239;
+}
+
+.main-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+
+.card-container{
+    position: relative;
+    display: flex;
+    gap: 30px;
+    width: 300px;
+    height: 450px;
+    justify-content: space-between;
+}
+
+.flip{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: .5s;
+
+}
+
+.frente,.tras,.frente-kiara,.tras-kiara,.frente-hudá,.tras-hudá,.frente-luffy,.tras-luffy,.frente-pretinha,.tras-pretinha,.frente-claudio,.tras-claudio{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #00000061;
+    backface-visibility: hidden;
+}
+
+.frente{
+    background-image:url(/assets/photos/fred.png) ;
+    background-size: cover;
+}
+
+.tras{
+    background-color: #777873a5;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+.frente-kiara{
+    background-image: url(/assets/photos/kiara.png);
+    background-size: cover;
+
+}
+
+.tras-kiara{
+    background-color: #777873a5;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+
+}
+
+.frente-hudá{
+    background-image: url(/assets/photos/A2275-153.jpg);
+    background-size: cover;
+
+}
+.tras-hudá{
+    background-color: #777873a5;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+
+}
+
+.frente-luffy{
+    background-image: url(/assets/photos/luffy.png);
+    background-size: cover;
+
+}
+
+.tras-luffy{
+    background-color: #777873a5;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+
+}
+
+.frente-pretinha{
+    background-image: url(/assets/photos/Rectangle\ 9.png);
+    background-size: cover;
+
+}
+.tras-pretinha{
+    background-color: #777873a5;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+
+
+.frente-claudio{
+    background-image: url(/assets/photos/claudio.png);
+    background-size: cover;
+
+}
+
+.tras-claudio{
+    background-color: #777873a5;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+
+}
+
+.card-container:hover .flip{
+    transform: rotateY(180deg);
+}
+

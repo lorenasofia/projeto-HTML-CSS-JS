@@ -6,6 +6,14 @@
 
 body {
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: flex;
 }
 
 header {
@@ -52,10 +60,13 @@ header {
     background-color: #f5f5f5;
     padding: 20px 0;
     text-align: center;
+    width: 100%;
+    background-color: rgb(134, 134, 134);
+    padding: 10px;
 }
 
-header h1 {
-    margin-bottom: 10px;
+h2.cadastroH2 {
+    padding: 15px;
 }
 
 nav ul {
@@ -76,7 +87,13 @@ section.bichinho,
 section.feedback {
     background-color: #e6e6e6; 
     padding: 15px; 
-    margin-top: 15px; 
+    margin-top: 15px;
+    width: 20%; 
+    height: 300px;
+}
+
+section.feedbackBlock {
+    padding: 15px;
 }
 
 form {
@@ -105,10 +122,29 @@ button {
     font-size: 16px;
     margin-top: 10px;
     cursor: pointer;
+    width: auto;
+}
+
+button:hover {
+    background-color: #808080; /* mudar aq */
 }
 
 footer {
     padding: 20px;
     background-color: #f5f5f5;
     text-align: center;
+}
+
+input#email {
+    width: 100%;
+    height: 100%;
+}
+
+textarea#feedback { 
+    width: 100%;
+    height: 100%;
+}
+
+div.separardofeedback {
+    padding: 25px;
 }

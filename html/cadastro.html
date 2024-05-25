@@ -18,9 +18,12 @@
         </nav>
     </header>
 
-    <h2>Cadastro do bichinho</h2>
+    <h2 class="cadastroH2">Cadastro</h2>
     <section class="login">
+
         <form action="" method="">
+            <label for="nome">Usuário</label>
+            <input type="text" id="nome" name="nome">
             <label for="email">Email</label>
             <input type="text" id="email" name="email">
 <!-- dá pra usar JS pra confirmar senha aqui -->
@@ -41,18 +44,19 @@
 
             <label for="descricaoBichinho">Descrição do Bichinho:</label>
             <textarea id="descricaoBichinho" name="descricaoBichinho" rows="4"></textarea>
+            <a> Já tem cadastro? Faça<a href="#" class="loginLink"> login </a></a>
 
-            <button type="submit">Enviar</button>
+            <button type="submit">Registrar</button>
     </form>
     </section>
 
-    <div>
-        <!-- TODO divisao aqui COMO FAAAAAAAAAAAAZ-->
+    <div class="separardofeedback">
+        <!-- talvez outra página aqui -->
     </div>
 
-    <section>
-        <h2>Feedback?</h2>
-        <p> mate-me </p>
+    <section class="feedbackBlock">
+        <h2 class="feedbackSection">Feedback?</h2>
+        <p> Nos mande um feedback para que possamos continuadamente melhorar o site! </p>
 
         <select name="tipoFeedback" id="tipoFeedback">
             <option value="reclamacao">Reclamação</option>

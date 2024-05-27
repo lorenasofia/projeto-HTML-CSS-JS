@@ -1,15 +1,41 @@
 * {
-    margin: 24;
+    margin: 24px;
     padding: 0;
     box-sizing: border-box;
+    justify-content: center;
+}
+
+:root {
+    --cor-princial: white;
+    --cor-secundaria:rgb(151, 151, 151);
+    --background-light: white;
+    --background-dark: rgb(59, 59, 59);
+    --fonte-principal: Arial, sans-serif;
+
 }
 
 body {
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body.light-mode {
+    background-color: var(--background-light);
+}
+
+body.dark-mode {
+    background-color: var(--background-dark);
+}
+
+form {
+    width: flex;
 }
 
 header {
-    background-color: rgb(122, 121, 118);
+    background-color: var(--cor-secundaria);
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -35,7 +61,8 @@ header a {
 }
 
 header a :hover {
-    color: #f13239;}
+    color: #f13239;
+}
 
 /* Reset básico */
 * {
@@ -52,10 +79,18 @@ header {
     background-color: #f5f5f5;
     padding: 20px 0;
     text-align: center;
+    width: 100%;
+    background-color: rgb(134, 134, 134);
+    padding: 10px;
 }
 
-header h1 {
-    margin-bottom: 10px;
+h2.cadastroH2
+.cadastroDescrição {
+    text-align: center;
+}
+
+h2.cadastroH2 {
+    margin-top: 25px;
 }
 
 nav ul {
@@ -71,17 +106,29 @@ nav ul li a {
     text-decoration: none; 
 }
 
-section.login,
-section.bichinho,
+section.loginContainer,
 section.feedback {
     background-color: #e6e6e6; 
     padding: 15px; 
-    margin-top: 15px; 
+    margin-top: 6rem; 
+    height: auto;
+    max-width: 500px;
+    width: 450px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+section.feedbackBlock {
+    padding-top: 15px;
+    margin-top: 10px;
 }
 
 form {
     display: flex; 
-    flex-direction: column; 
+    flex-direction: column;
+     
 }
 
 label {
@@ -89,9 +136,30 @@ label {
 }
 
 input[type="text"],
+input[type="email"],
 input[type="file"],
+input[type="password"],
 textarea {
-    margin-bottom: 10px;  
+    width: calc(100% - 20px);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: none; 
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
+input#nome {
+    margin-top: 45px
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="file"]:hover,
+input[type="password"]:hover,
+textarea {
+    border-color: rgb(113, 255, 255);
 }
 
 button {
@@ -103,8 +171,14 @@ button {
     text-decoration: none;  
     display: inline-block;
     font-size: 16px;
-    margin-top: 10px;
+    margin: 10px;
     cursor: pointer;
+    width: auto;
+    border-radius: 10px;
+}
+
+button:hover {
+    opacity: 0.8;
 }
 
 footer {
@@ -112,3 +186,57 @@ footer {
     background-color: #f5f5f5;
     text-align: center;
 }
+
+
+textarea#feedback 
+textarea#descricaoBichinho { 
+    width: 100%;
+    height: 100%;
+    width: 100px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: none;  
+    resize: vertical;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.separardofeedback {
+    padding: 25px;
+}
+
+div.espacinho {
+    padding: 10px;
+}
+
+.containerGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-right: 30rem;
+}
+
+.textFiller {
+    text-align: center;
+    padding: 10px;
+    margin: 100px;
+    padding-bottom: 33rem;
+}
+
+p.textFillerDesc {
+    text-align: center;
+}
+
+.dark-mode {
+    background-color: #333; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button#toggle-mode {
+    width: auto;
+    height: 5px;
+  }

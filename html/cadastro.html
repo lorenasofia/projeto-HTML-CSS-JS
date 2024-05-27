@@ -3,56 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Cadastro de Bichinho</title>
+    <title>Cadastro de Bichinho</title>
         <link rel="stylesheet" href="\style\cadastro.css">
 </head>
 
 <body>
+    <script src="\scripts\script.js">          
+    </script>
     <header>
         <nav>
             <ul>
-                <li><a href="html\pag1.html">Home</a></li>
-                <li><a href="html\pag-2.html">Galeria</a></li>
+                <li><a href="\html\pag1.html">Home</a></li>
+                <li><a href="\html\pag-2.html">Galeria</a></li>
                 <li><a href="#">Cadastro</a></li>
+                <button id="toggle-mode"> Modo Escuro (colocar icon) </button>
             </ul>
         </nav>
     </header>
 
-    <h2>Cadastro do bichinho</h2>
-    <section class="login">
-        <form action="" method="">
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email">
+<div class="containerGrid">
+    <div class="textFiller">
+        <h2 class="textFillerH2"> Cadastre seu bichinho </h2>
+        <p class="textFillerDesc"> Crie rapidamente e compartilhe seu amigo com o mundo. </p>
+    </div>
+    <section class="loginContainer">
+          <h2 class="cadastroH2">Cadastro</h2>
+    <a class=cadastroDescrição> Cadastre-se para fazer upload da foto do seu bichinho. </a>
+
+      <form action="" method="">
+            <input type="text" id="nome" name="nome" placeholder="Usuário">
+
+            <input type="email" id="email" name="email" placeholder="Email">
+
 <!-- dá pra usar JS pra confirmar senha aqui -->
-            <label for="senha">Senha</label>
-            <input type="password" id="senha" name="senha">
-            <label for="senhaConf">Confirme sua senha</label>
-            <input type="password" id="senhaConf" name="senhaConf">
-        </form>
-    </section>
+            <input type="password" id="senha" name="senha" placeholder="Senha">
+            <input type="password" id="senhaConf" name="senhaConf" placeholder="Digite a senha novamente">
 
-    <section class="bichinho">
-        <form action="" method="">
-            <label for="nomeBichinho">Nome do Bichinho:</label>
-            <input type="text" id="nomeBichinho" name="nomeBichinho">
+        <div class="espacinho"> </div>
 
+            <input type="text" id="nomeBichinho" name="nomeBichinho" placeholder="Nome do bichinho">
             <label for="fotoBichinho">Foto do Bichinho:</label>
             <input type="file" id="fotoBichinho" name="fotoBichinho" accept="image/*">
 
             <label for="descricaoBichinho">Descrição do Bichinho:</label>
-            <textarea id="descricaoBichinho" name="descricaoBichinho" rows="4"></textarea>
+            <textarea id="descricaoBichinho" name="descricaoBichinho" rows="4" placeholder="Descreva seu cachorrinho aqui. Personalidade, gostos e o melhor dele."></textarea>
 
-            <button type="submit">Enviar</button>
+
+            <button class=botaoRegistrar type="submit">Registrar</button>
+            <p> Ou faça <a href="#" class="loginLink"> login </a></p>
     </form>
     </section>
+</div>
 
-    <div>
-        <!-- TODO divisao aqui COMO FAAAAAAAAAAAAZ-->
+    <div class="separardofeedback">
+        <!-- talvez outra página aqui -->
     </div>
 
-    <section>
-        <h2>Feedback?</h2>
-        <p> mate-me </p>
+    <section class="feedbackBlock">
+        <h2 class="feedbackSection">Feedback?</h2>
+        <p> Nos mande um feedback para que possamos continuadamente melhorar o site! </p>
 
         <select name="tipoFeedback" id="tipoFeedback">
             <option value="reclamacao">Reclamação</option>
@@ -60,8 +69,8 @@
             <option value="sugestao">Sugestão</option>
         </select>
 
-        <textarea name="feedback" id="feedback" rows="10"></textarea>
-        <button>Enviar</button>
+        <textarea name="feedback" id="feedback" rows="10" placeholder="Deixe um feedback"></textarea>
+        <button class="botaoFeedback">Enviar</button>
     </section>
 
 <!-- rodapé -->

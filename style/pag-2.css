@@ -9,11 +9,17 @@ body {
 }
 
 header {
-    background-color: rgb(122, 121, 118);
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    height: 65px;
+    background-color: rgb(122, 121, 118);
+    border: 0.1px solid;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 0.3px 0px 0.3px rgb(122, 121, 118);
 }
+
+
 
 header ul {
     list-style: none;

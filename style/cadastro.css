@@ -8,7 +8,6 @@
 :root {
     --cor-princial: white;
     --cor-secundaria:rgb(151, 151, 151);
-    --background-light: white;
     --background-dark: rgb(59, 59, 59);
     --fonte-principal: Arial, sans-serif;
 
@@ -20,10 +19,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-body.light-mode {
-    background-color: var(--background-light);
 }
 
 body.dark-mode {

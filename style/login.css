@@ -198,15 +198,5 @@ p.textFillerDesc {
     text-align: center;
 }
 
-.dark-mode {
-    background-color: #333; 
-    color: #fff; 
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
+
   
-  button#toggle-mode {
-    width: auto;
-    height: 5px;
-  }

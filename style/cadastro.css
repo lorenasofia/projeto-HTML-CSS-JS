@@ -6,14 +6,29 @@
 }
 
 :root {
-    --cor-princial: white;
+    --cor-principal: white;
     --cor-secundaria:rgb(151, 151, 151);
+
     --background-dark: rgb(59, 59, 59);
+    --texto-principal-dark: black;
+
+    --background-light: white;
+    --texto-principal-light: white;
+
     --fonte-principal: Arial, sans-serif;
 
 }
 
 body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body.light-mode {
+    background-color: var(--background-light);
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
@@ -23,6 +38,11 @@ body {
 
 body.dark-mode {
     background-color: var(--background-dark);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 form {
@@ -35,6 +55,7 @@ header {
     align-items: center;
     justify-content: flex-end;
 }
+
 
 header ul {
     list-style: none;
@@ -222,16 +243,13 @@ div.espacinho {
 p.textFillerDesc {
     text-align: center;
 }
-
-.dark-mode {
-    background-color: #333; 
-    color: #fff; 
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
   
   button#toggle-mode {
     width: auto;
     height: 5px;
   }
+
+  .change-theme-button {
+    
+  }
+  

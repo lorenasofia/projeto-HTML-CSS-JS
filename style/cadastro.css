@@ -6,15 +6,35 @@
 }
 
 :root {
-    --cor-princial: white;
-    --cor-secundaria:rgb(151, 151, 151);
+    --cor-principal: #f6f6f2;
+    --cor-secundaria: #388087;
+    --cor-destaque: #c2edce;
+    --cor-preto: #192a2e; 
+    --texto-titulos: "Playfair Display", Arial, Sans-serif;
+    --texto-paragrafos: "Nunito", Arial, sans-serif;
+
+    --background-dark: rgb(31, 31, 31);
+    --texto-principal-dark: black;
+
     --background-light: white;
-    --background-dark: rgb(59, 59, 59);
-    --fonte-principal: Arial, sans-serif;
+    --texto-principal-light: white;
+
+    --fonte-principal: "Playfair Display", Arial, sans-serif;;
+    --fonte-paragrafo: "Nunito", Arial, sans-serif;
 
 }
 
 body {
+    font-family: var(--fonte-paragrafo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-principal);
+}
+
+body.light-mode {
+    background-color: var(--background-light);
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
@@ -22,12 +42,14 @@ body {
     align-items: center;
 }
 
-body.light-mode {
-    background-color: var(--background-light);
-}
-
 body.dark-mode {
-    background-color: var(--background-dark);
+    font-family: var(--fonte-paragrafo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-preto);
+    color: white; /* cor da fonte */
 }
 
 form {
@@ -35,11 +57,12 @@ form {
 }
 
 header {
-    background-color: var(--cor-secundaria);
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
+
 
 header ul {
     list-style: none;
@@ -54,10 +77,13 @@ header ul li+li {
 }
 
 header a {
-    color: #ebebeb;
+    /*texto da header */
+    color: #000000;
     text-decoration: none;
     /*tira o traço do link*/
     transition: color 0.2s;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 header a :hover {
@@ -71,35 +97,53 @@ header a :hover {
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-}
-
 header {
     background-color: #f5f5f5;
     padding: 20px 0;
     text-align: center;
     width: 100%;
-    background-color: rgb(134, 134, 134);
+    background-color: white;
     padding: 10px;
 }
 
-h2.cadastroH2
-.cadastroDescrição {
-    text-align: center;
-}
-
 h2.cadastroH2 {
+    text-align: center;
     margin-top: 25px;
+    font-family: var(--fonte-principal);
+    font-weight: 700;
 }
 
-nav ul {
-    list-style-type: none;
+h2.textFillerH2 {
+    text-align: center;
+    margin-top: 25px;
+    font-family: var(--fonte-principal);
+    
+}
+
+h3.cadastroInfoUser
+h3.cadastroInfoBichinho {
+    font-family: var(--fonte-paragrafo);
+}
+
+
+.highlight {
+    color: var(--cor-secundaria)
+}
+
+a.cadastroDescrição {
+    text-align: center;
+    font-family: var(--fonte-paragrafo);
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-bottom: 5px;
 }
 
 nav ul li {
     display: inline-block;
     margin-right: 20px;
+    margin-bottom: 5px;
 }
 
 nav ul li a {
@@ -108,7 +152,7 @@ nav ul li a {
 
 section.loginContainer,
 section.feedback {
-    background-color: #e6e6e6; 
+    background-color: white;
     padding: 15px; 
     margin-top: 6rem; 
     height: auto;
@@ -132,27 +176,57 @@ form {
 }
 
 label {
-    font-weight: bold; 
+    font-weight: normal;
+    font-family: var(--fonte-paragrafo); 
 }
 
 input[type="text"],
 input[type="email"],
 input[type="file"],
 input[type="password"],
-textarea {
+textarea#descricaoBichinho,
+textarea#feedback {
     width: calc(100% - 20px);
     margin: 10px;
     padding: 10px;
-    border-radius: 5px;
-    border: none;
+    border: 2px solid;
+    border-color: rgb(196, 196, 196);
     box-shadow: none; 
     border-radius: 8px;
     flex-wrap: wrap;
+    font-family: var(--fonte-paragrafo);
+}
+
+input#fotoBichinho.submit-foto {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: var(--cor-secundaria);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: var(--fonte-paragrafo);
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.submit-foto:hover {
+    background-color: #6a6a6a;
+    opacity: 0.8;
+}
+
+.submit-foto:active {
+    background-color: var(--cor-principal);
 }
 
 input#nome {
-    margin-top: 45px
+    margin-top: 5px
 }
+
+
 
 input[type="text"]:hover,
 input[type="email"]:hover,
@@ -163,7 +237,7 @@ textarea {
 }
 
 button {
-    background-color: #808080; 
+    background-color: var(--cor-secundaria); 
     border: none;  
     color: white;  
     padding: 15px 32px;  
@@ -175,6 +249,7 @@ button {
     cursor: pointer;
     width: auto;
     border-radius: 10px;
+    font-family: var(--fonte-paragrafo);
 }
 
 button:hover {
@@ -190,7 +265,7 @@ footer {
 
 textarea#feedback 
 textarea#descricaoBichinho { 
-    width: 100%;
+    width: auto;
     height: 100%;
     width: 100px;
     margin-bottom: 15px;
@@ -226,17 +301,37 @@ div.espacinho {
 
 p.textFillerDesc {
     text-align: center;
+    font-family: var(--fonte-paragrafo);
 }
-
-.dark-mode {
-    background-color: #333; 
-    color: #fff; 
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
   
   button#toggle-mode {
     width: auto;
     height: 5px;
+  }
+
+
+  button.change-theme-button {
+    background-color: var(--cor-destaque);
+  }
+  
+  a.loginLink {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-weight: bolder;
+  }
+
+  p.façaLogin {
+    font-family: var(--fonte-paragrafo);
+    font-weight: bold;
+  }
+
+  select#tipoFeedback {
+    width: auto;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: none; 
+    border-radius: 8px;
+    flex-wrap: wrap;
   }

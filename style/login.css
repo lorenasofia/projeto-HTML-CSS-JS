@@ -6,11 +6,21 @@
 }
 
 :root {
-    --cor-princial: white;
-    --cor-secundaria:rgb(151, 151, 151);
+    --cor-principal: #f6f6f2;
+    --cor-secundaria: #388087;
+    --cor-destaque: #c2edce;
+    --texto-titulos: "Playfair Display", Arial, Sans-serif;
+    --texto-paragrafos: "Nunito", Arial, sans-serif;
+
+    --background-dark: rgb(31, 31, 31);
+    --texto-principal-dark: black;
+
     --background-light: white;
-    --background-dark: rgb(59, 59, 59);
-    --fonte-principal: Arial, sans-serif;
+    --texto-principal-light: white;
+
+    --fonte-principal: "Playfair Display", Arial, sans-serif;;
+    --fonte-paragrafo: "Nunito", Arial, sans-serif;
+
 
 }
 
@@ -198,15 +208,5 @@ p.textFillerDesc {
     text-align: center;
 }
 
-.dark-mode {
-    background-color: #333; 
-    color: #fff; 
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
+
   
-  button#toggle-mode {
-    width: auto;
-    height: 5px;
-  }

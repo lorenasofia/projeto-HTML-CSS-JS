@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Bichinho</title>
         <link rel="stylesheet" href="\style\cadastro.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <script src="\scripts\script.js">          
-    </script>
     <header>
         <nav>
             <ul>
                 <li><a href="\html\pag1.html">Home</a></li>
                 <li><a href="\html\pag-2.html">Galeria</a></li>
                 <li><a href="#">Cadastro</a></li>
-                <button id="toggle-mode"> Modo Escuro (colocar icon) </button>
+                <button class="change-theme-button">
+                    <img src="/assets/icons/dark-theme.svg" alt="Ícone de Modo Escuro" width="20" height="20">
+                </button>                  
             </ul>
         </nav>
     </header>
 
 <div class="containerGrid">
     <div class="textFiller">
-        <h2 class="textFillerH2"> Cadastre seu bichinho </h2>
+        <h2 class="textFillerH2">
+             <span class=highlight> Cadastre </span> seu bichinho  
+            </h2>
         <p class="textFillerDesc"> Crie rapidamente e compartilhe seu amigo com o mundo. </p>
     </div>
     <section class="loginContainer">
@@ -31,6 +36,7 @@
     <a class=cadastroDescrição> Cadastre-se para fazer upload da foto do seu bichinho. </a>
 
       <form action="" method="">
+        <h3 class="cadastroInfoUser"> primeiro, insira suas informações </h3>
             <input type="text" id="nome" name="nome" placeholder="Usuário">
 
             <input type="email" id="email" name="email" placeholder="Email">
@@ -40,17 +46,17 @@
             <input type="password" id="senhaConf" name="senhaConf" placeholder="Digite a senha novamente">
 
         <div class="espacinho"> </div>
-
+        <h3 class="cadastroInfoBichinho"> agora, fale do seu bichinho</h3>
             <input type="text" id="nomeBichinho" name="nomeBichinho" placeholder="Nome do bichinho">
             <label for="fotoBichinho">Foto do Bichinho:</label>
-            <input type="file" id="fotoBichinho" name="fotoBichinho" accept="image/*">
+            <input class ="submit-foto"type="file" id="fotoBichinho" name="fotoBichinho" accept="image/*">
 
             <label for="descricaoBichinho">Descrição do Bichinho:</label>
             <textarea id="descricaoBichinho" name="descricaoBichinho" rows="4" placeholder="Descreva seu cachorrinho aqui. Personalidade, gostos e o melhor dele."></textarea>
 
 
             <button class=botaoRegistrar type="submit">Registrar</button>
-            <p> Ou faça <a href="#" class="loginLink"> login </a></p>
+            <p class="façaLogin"> Ou faça <a href="/html/login.html" class="loginLink"> login </a></p>
     </form>
     </section>
 </div>
@@ -77,5 +83,6 @@
     <footer>
     
     </footer>
+    <script src="\scripts\dark-mode.js"></script>
 </body>
 </html>

@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Comic Sans MS
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #F6F6F2;
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -18,7 +19,7 @@ header {
     align-items: center;
     justify-content: center;
     height: 65px;
-    background-color: rgb(122, 106, 106);
+    background-color: #388087;
     border: 0.1px solid;
     backdrop-filter: blur(8px);
     box-shadow: 0px 0.3px 0px 0.3px rgb(220, 220, 218);
@@ -33,7 +34,6 @@ header ul {
 
 header ul li + li {
     margin-left: 24px;
-    align-items: center;
 }
 
 header a {
@@ -41,6 +41,7 @@ header a {
     text-decoration: none;
     transition: color 0.2s;
     text-shadow: 2px 2px 8px black;
+
 }
 
 header .register {
@@ -61,14 +62,16 @@ header .register {
     font-size: 3em;
     margin: 0.5em 0;
     color: #333;
+    text-align: center;
 }
 
 .underline {
     width: 4%;
     height: 5px;
-    background-color: #404244;
+    background-color: #6FB3B8;
     /* cor bege */
     margin: 0 auto 1em;
+    border-radius: 10px;
 }
 
 .info{
@@ -84,55 +87,6 @@ h2 {
     
 }
 
-/*.person-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 800px;
-    margin: 25px auto;
-
-}
-
-.person-wrapper.right {
-    flex-direction: row-reverse;
-    
-}
-
-.person {
-    opacity: 100%;
-    max-width: 700px;
-    height: 200px;
-    padding: 30px;
-    border-radius: 40px;
-    background-color: rgb(122, 106, 106);
-    border: 2px solid;
-    backdrop-filter: blur(8px);
-    gap: 10px;
-    box-shadow: 0px 1px 0px 1px black;
-    flex-grow: 1;
-}
-
-.nome {
-    opacity: 100%;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-}
-
-img {
-    opacity: 100%;
-    width: 200px;
-    height: auto;
-    background-color: white;
-    padding: 3px;
-    border-radius: 40px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 0 20px; /* Espaço entre a imagem e o texto 
-}
-    */
-
 .cards{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
@@ -145,12 +99,13 @@ img {
 }
 
 .card{
-    background-color: #666;
+    background-color: #BADFE7;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 35px 40px;
     box-shadow: 6px 6px 10px #00000038;
+    border-radius: 30px;
 }
 
 .card .user{
@@ -159,6 +114,12 @@ img {
     border-radius: 50%;
     margin-bottom: 15px;
 }
+
+#bottom{
+    transform: translateX(160px);
+}
+
+
 
 
 h1{
@@ -172,3 +133,4 @@ h1{
     border: 2px solid black;
     border-radius: 5px;
 }
+
